@@ -1,8 +1,9 @@
 var boxHeight = 150;
 var boxWidth = 150;
 var boxOpacity = 100;
-var boxColor = Math.floor((Math.random()*4)+1);
-
+var boxColor = 0;
+var boxColorHolder = 0;
+console.log(boxColor);
 
 function button1(){
     if (boxHeight < 500) {
@@ -14,19 +15,25 @@ function button1(){
 }
 
 function button2(){
-    boxColor = Math.floor((Math.random()*4)+1);
+    while (boxColor == boxColorHolder) {
+    boxColor = Math.floor((Math.random()*5)+1);
+    }
     if (boxColor == 1) { 
         document.getElementById("box").style.backgroundColor = "aqua";
     }
     else if (boxColor == 2) {
         document.getElementById("box").style.backgroundColor = "blue";
     } 
-    else if (boxCOlor == 3) {
+    else if (boxColor == 3) {
         document.getElementById("box").style.backgroundColor = "cyan";
     }
     else if (boxColor == 4) {
         document.getElementById("box").style.backgroundColor = "darkblue";
     }
+    else if (boxColor == 5) {
+        document.getElementById("box").style.backgroundColor = "darkslateblue";
+    }
+    boxColorHolder = boxColor;
 }
 
 function button3(){
