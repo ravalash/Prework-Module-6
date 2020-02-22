@@ -5,25 +5,25 @@ var boxColor = 0;
 var boxColorHolder = 0;
 console.log(boxColor);
 
-function button1(){
+function button1() {
     if (boxHeight < 500) {
-        boxHeight=boxHeight+10;
-        boxWidth=boxWidth+10;
-        document.getElementById("box").style.height = boxHeight+"px";
-        document.getElementById("box").style.width = boxWidth+"px";
+        boxHeight = boxHeight + 10;
+        boxWidth = boxWidth + 10;
+        document.getElementById("box").style.height = boxHeight + "px";
+        document.getElementById("box").style.width = boxWidth + "px";
     }
 }
 
-function button2(){
+function button2() {
     while (boxColor == boxColorHolder) {
-    boxColor = Math.floor((Math.random()*5)+1);
+        boxColor = Math.floor((Math.random() * 5) + 1);
     }
-    if (boxColor == 1) { 
-        document.getElementById("box").style.backgroundColor = "aqua";
+    if (boxColor == 1) {
+        document.getElementById("box").style.backgroundColor = "CornflowerBlue";
     }
     else if (boxColor == 2) {
         document.getElementById("box").style.backgroundColor = "blue";
-    } 
+    }
     else if (boxColor == 3) {
         document.getElementById("box").style.backgroundColor = "cyan";
     }
@@ -36,14 +36,14 @@ function button2(){
     boxColorHolder = boxColor;
 }
 
-function button3(){
+function button3() {
     if (boxOpacity > 10) {
         boxOpacity = boxOpacity - 10;
-        document.getElementById("box").style.opacity = boxOpacity+"%";
+        document.getElementById("box").style.opacity = boxOpacity + "%";
     }
 }
 
-function button4(){
+function button4() {
     document.getElementById("box").style.backgroundColor = "orange";
     document.getElementById("box").style.opacity = "100%";
     document.getElementById("box").style.height = "150px";
